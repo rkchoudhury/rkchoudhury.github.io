@@ -1,0 +1,8 @@
+export const profile = {
+  name: "Rakesh Choudhury",
+  role: "Senior Software Engineer",
+  github: "https://github.com/rkchoudhury",
+  linkedin: "https://www.linkedin.com/in/rakchoudhury/",
+  email: "rkchoudhury96@gmail.com",
+  phone: "",
+};

@@ -5,14 +5,8 @@ import {
   Smartphone, Code2, Layers3, Database, TestTube2, ChevronDown
 } from "lucide-react";
 import Footer from "./components/Footer";
-
-const profile = {
-  name: "Rakesh Choudhury",
-  role: "Senior Software Engineer",
-  github: "https://github.com/rkchoudhury",
-  linkedin: "https://www.linkedin.com/in/rakchoudhury/",
-  email: "rkchoudhury96@gmail.com",
-};
+import Contact from "./components/Contact";
+import { profile } from "./configs/profileData";
 
 const experience = [
   {
@@ -274,14 +268,7 @@ function App() {
           </div>
         </Section>
 
-        <section id="contact" className="contact">
-          <div className="container contact-inner">
-            <p className="eyebrow">05 / CONTACT</p>
-            <h2>Have an interesting problem?</h2>
-            <p>Let's build something useful, reliable and a little bit delightful.</p>
-            <a className="primary big" href={`mailto:${profile.email}`}>Get in touch <Mail size={18} /></a>
-          </div>
-        </section>
+        <Contact />
       </main>
 
       <Footer />
