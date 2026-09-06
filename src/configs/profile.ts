@@ -6,4 +6,5 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/rakchoudhury/",
   email: "rkchoudhury96@gmail.com",
   phone: "",
+  resume: "Rakesh_Choudhury_Mobile_Developer.pdf",
 };

@@ -25,7 +25,7 @@ const HeroSection = ({ goTo }: IProps) => {
                     </p>
                     <div className="hero-actions">
                         <button className="primary" onClick={() => goTo("projects")}>Explore my work <ArrowUpRight size={17} /></button>
-                        <a className="secondary" href="/resume.pdf" download>Download resume <Download size={16} /></a>
+                        <a className="secondary" href={`/${profile.resume}`} download>Download resume <Download size={16} /></a>
                     </div>
                     <div className="socials">
                         <a href={profile.github} target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>

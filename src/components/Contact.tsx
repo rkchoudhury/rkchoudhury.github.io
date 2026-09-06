@@ -14,7 +14,7 @@ const Contact = () => {
                     <a className="secondary" href={`tel:${profile.phone}`}><Phone size={18} /> Phone</a>
                     <a className="secondary" href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={18} /> LinkedIn</a>
                     <a className="secondary" href={profile.github} target="_blank" rel="noreferrer"><Github size={18} /> GitHub</a>
-                    <a className="secondary" href="/resume.pdf" download><Download size={18} /> Download resume </a>
+                    <a className="secondary" href={`/${profile.resume}`} download><Download size={18} /> Download resume </a>
                 </div>
             </div>
         </section>
