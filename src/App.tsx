@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Download, Menu, X, ChevronDown } from "lucide-react";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
+import { Contact, Footer } from "./components";
 import { profile, experience, projects, skills } from "./configs";
 
 const reveal = {
