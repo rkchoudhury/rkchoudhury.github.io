@@ -1,86 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowUpRight, Github, Linkedin, Mail, Download, Menu, X,
-  Smartphone, Code2, Layers3, Database, TestTube2, ChevronDown
-} from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Download, Menu, X, ChevronDown } from "lucide-react";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import { profile } from "./configs/profileData";
-
-const experience = [
-  {
-    company: "EY GDS",
-    role: "Senior Software Engineer",
-    period: "Oct 2024 — Present",
-    location: "Bangalore, India",
-    points: [
-      "Develop reusable React Native components for scalable and maintainable applications.",
-      "Integrate and customize third-party libraries and plugins to improve application performance and user experience.",
-      "Collaborate with cross-functional squads for seamless integration and delivery.",
-      "Worked on Bangkok Bank Mobile Banking and gained practical exposure to React Native micro-frontends with Re.Pack."
-    ]
-  },
-  {
-    company: "Honeywell",
-    role: "Mobile Developer 2",
-    period: "Oct 2021 — Oct 2024",
-    location: "Bangalore, India",
-    points: [
-      "Developed React Native applications interfacing with Honeywell HMI devices and controllers.",
-      "Implemented Bluetooth Low Energy (BLE) communication for real-time controller data.",
-      "Refactored 50+ JavaScript files to TypeScript, reducing runtime errors by 40%.",
-      "Implemented live polling and BLE-based IO configuration workflows."
-    ]
-  },
-  {
-    company: "Tech Mahindra",
-    role: "Software Engineer",
-    period: "May 2018 — Oct 2021",
-    location: "Bangalore, India",
-    points: [
-      "Started as a Mobile Application Developer building healthcare applications with React Native.",
-      "Built responsive UI components across devices and screen sizes.",
-      "Worked on MyBSWHealth and BSW Virtual, including maps, chatbot and video-conferencing features.",
-      "Redesigned BSW Virtual UI for mobile and tablet compatibility, contributing to a 35% increase in user retention."
-    ]
-  }
-];
-
-const projects = [
-  {
-    title: "DevTinder",
-    type: "Web & Mobile • Full Stack",
-    period: "May 2025 — Dec 2025",
-    stack: ["React", "Node.js", "MongoDB", "Socket.io"],
-    description: "A full-stack platform that helps developers connect, interact and collaborate, with real-time chat and payment integration.",
-    github: profile.github
-  },
-  {
-    title: "Netflix Clone",
-    type: "Web Application",
-    period: "Jan 2024 — Feb 2024",
-    stack: ["React", "Redux Toolkit", "Tailwind CSS"],
-    description: "A Netflix-inspired React application featuring debounced search, caching, API polling chat and n-level nested comments.",
-    github: profile.github
-  },
-  {
-    title: "Food Ordering App",
-    type: "Android Application",
-    period: "Aug 2023 — Dec 2023",
-    stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
-    description: "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
-    github: profile.github
-  }
-];
-
-const skills = [
-  { icon: Smartphone, title: "Mobile", items: ["React Native", "Android", "Kotlin", "Java"] },
-  { icon: Code2, title: "Frontend", items: ["React JS", "JavaScript", "TypeScript", "React Hooks"] },
-  { icon: Layers3, title: "Architecture", items: ["Redux", "Redux Toolkit", "Redux Saga", "Re.Pack", "Tailwind CSS"] },
-  { icon: Database, title: "Backend", items: ["Node.js", "Express.js", "MongoDB"] },
-  { icon: TestTube2, title: "Testing", items: ["Jest", "React Testing Library"] }
-];
+import { profile, experience, projects, skills } from "./configs";
 
 const reveal = {
   hidden: { opacity: 0, y: 28 },

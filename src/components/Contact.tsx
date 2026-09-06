@@ -1,6 +1,6 @@
 import React from 'react'
 import { Github, Linkedin, Mail, Phone, Download } from "lucide-react";
-import { profile } from '../configs/profileData';
+import { profile } from '../configs';
 
 const Contact = () => {
     return (
