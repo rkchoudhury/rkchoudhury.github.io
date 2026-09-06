@@ -1,31 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Download, Menu, X, ChevronDown } from "lucide-react";
-import { Contact, Footer } from "./components";
+import { About, Contact, Experience, Footer, Projects, Skills } from "./components";
 import { profile, experience, projects, skills } from "./configs";
-
-const reveal = {
-  hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } }
-};
-
-function Section({ id, eyebrow, title, children }) {
-  return (
-    <section id={id} className="section">
-      <motion.div
-        className="container"
-        variants={reveal}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
-      >
-        <p className="eyebrow">{eyebrow}</p>
-        <h2>{title}</h2>
-        {children}
-      </motion.div>
-    </section>
-  );
-}
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -105,91 +82,10 @@ function App() {
           <button className="scroll-cue" onClick={() => go("about")}><ChevronDown size={18} /></button>
         </section>
 
-        <Section id="about" eyebrow="01 / ABOUT" title="Engineering with a product mindset.">
-          <div className="about-grid">
-            <div>
-              <p className="large-copy">
-                I’m a software engineer with experience across mobile, frontend and backend
-                development. My core strength is turning complex product requirements into
-                maintainable, reusable applications.
-              </p>
-              <p className="body-copy">
-                My work spans enterprise mobile applications, healthcare products, industrial
-                controller interfaces and full-stack side projects. I enjoy architecture,
-                performance, clean code and solving problems that have a measurable impact.
-              </p>
-            </div>
-            <div className="stat-grid">
-              <div><strong>8+</strong><span>Years experience</span></div>
-              <div><strong>3</strong><span>Major organizations</span></div>
-              <div><strong>50+</strong><span>JS files migrated to TS</span></div>
-              <div><strong>40%</strong><span>Runtime error reduction</span></div>
-            </div>
-          </div>
-        </Section>
-
-        <Section id="experience" eyebrow="02 / EXPERIENCE" title="Where I've built things.">
-          <div className="timeline">
-            {experience.map((job, i) => (
-              <motion.article
-                className="timeline-item"
-                key={job.company}
-                initial={{ opacity: 0, x: -18 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * .08 }}
-              >
-                <div className="timeline-marker">{String(i + 1).padStart(2, "0")}</div>
-                <div className="timeline-main">
-                  <div className="job-head">
-                    <div><h3>{job.role}</h3><p>{job.company} · {job.location}</p></div>
-                    <time>{job.period}</time>
-                  </div>
-                  <ul>{job.points.map((point) => <li key={point}>{point}</li>)}</ul>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="projects" eyebrow="03 / PROJECTS" title="Things I've built.">
-          <div className="project-grid">
-            {projects.map((project, i) => (
-              <motion.article
-                className="project-card"
-                key={project.title}
-                whileHover={{ y: -7 }}
-                transition={{ duration: .2 }}
-              >
-                <div className="project-number">0{i + 1}</div>
-                <div className="project-type">{project.type}</div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="tags">{project.stack.map((s) => <span key={s}>{s}</span>)}</div>
-                <div className="project-footer">
-                  <span>{project.period}</span>
-                  <a href={project.github} target="_blank" rel="noreferrer">Source <ArrowUpRight size={15} /></a>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </Section>
-
-        <Section id="skills" eyebrow="04 / TOOLBOX" title="Technologies I work with.">
-          <div className="skills-grid">
-            {skills.map((skill) => {
-              const Icon = skill.icon;
-              return (
-                <div className="skill-card" key={skill.title}>
-                  <Icon size={22} />
-                  <h3>{skill.title}</h3>
-                  <div className="skill-list">{skill.items.map(x => <span key={x}>{x}</span>)}</div>
-                </div>
-              );
-            })}
-          </div>
-        </Section>
-
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
         <Contact />
       </main>
 
