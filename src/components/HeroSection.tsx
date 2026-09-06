@@ -8,6 +8,7 @@ interface IProps {
 }
 
 const HeroSection = ({ goTo }: IProps) => {
+    const firstName = profile.name.split(" ")?.[0]?.toUpperCase() ?? "";
     return (
         <section id="home" className="hero">
             <div className="hero-grid" />
@@ -16,7 +17,7 @@ const HeroSection = ({ goTo }: IProps) => {
             <div className="container hero-content">
                 <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
                     <div className="availability"><span /> Open to interesting engineering conversations</div>
-                    <p className="hero-kicker">HELLO, I'M RAKESH</p>
+                    <p className="hero-kicker">HELLO, I'M {firstName}</p>
                     <h1>Building <em>mobile</em> experiences that scale.</h1>
                     <p className="hero-copy">
                         Senior Software Engineer focused on React Native, modern frontend architecture

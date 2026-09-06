@@ -1,42 +1,23 @@
-import { useState } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
-import { About, Contact, Experience, Footer, HeroSection, Projects, Skills } from "./components";
+import { useCallback, useState } from "react";
+import { About, Contact, Experience, Footer, Header, HeroSection, Projects, Skills } from "./components";
 
 function App() {
-  const [open, setOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const go = (id: string) => {
+  const goTo = useCallback((id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
-  };
+    setMenuOpen(false);
+  }, [setMenuOpen]);
 
   return (
     <div className="app">
+      {/* Header Section */}
       <div className="noise" />
-      <header className="nav-wrap">
-        <nav className="nav container">
-          <button className="brand" onClick={() => go("home")}>
-            <span>RC</span>
-            <strong>Rakesh Choudhury</strong>
-          </button>
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} goTo={goTo} />
 
-          <div className={`nav-links ${open ? "open" : ""}`}>
-            {["about", "experience", "projects", "skills"].map((item) => (
-              <button key={item} onClick={() => go(item)}>
-                {item}
-              </button>
-            ))}
-            <button className="nav-contact" onClick={() => go("contact")}>Let's talk <ArrowUpRight size={15} /></button>
-          </div>
-
-          <button className="menu-btn" onClick={() => setOpen(!open)} aria-label="Toggle menu">
-            {open ? <X /> : <Menu />}
-          </button>
-        </nav>
-      </header>
-
+      {/* Content Section */}
       <main>
-        <HeroSection goTo={go} />
+        <HeroSection goTo={goTo} />
         <About />
         <Experience />
         <Projects />
@@ -44,6 +25,7 @@ function App() {
         <Contact />
       </main>
 
+      {/* Footer Section */}
       <Footer />
     </div>
   );

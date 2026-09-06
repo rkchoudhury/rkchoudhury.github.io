@@ -1,3 +1,4 @@
+import Header from "./Header";
 import HeroSection from "./HeroSection";
 import About from "./About";
 import Experience from "./Experience";
@@ -6,4 +7,13 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-export { HeroSection, About, Experience, Projects, Skills, Contact, Footer };
+export {
+  Header,
+  HeroSection,
+  About,
+  Experience,
+  Projects,
+  Skills,
+  Contact,
+  Footer,
+};
