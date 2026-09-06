@@ -537,7 +537,8 @@ footer {
   border-top: 1px solid var(--line);
   padding: 25px 0;
   color: #686e79;
-  font: 10px var(--mono);
+  font: 12px var(--mono);
+  color: var(--muted);
 }
 .footer-inner {
   display: flex;
