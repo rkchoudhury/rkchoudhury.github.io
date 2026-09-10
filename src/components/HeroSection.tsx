@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Download, ChevronDown } from "lucide-react";
 import { profile } from '../configs';
+import { Phone } from './Phone';
 
 interface IProps {
     goTo: (id: string) => void;
@@ -35,12 +36,12 @@ const HeroSection = ({ goTo }: IProps) => {
                 </motion.div>
 
                 <motion.div
-                    className="code-card"
+                    // className="code-card"
                     initial={{ opacity: 0, scale: .96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: .8, delay: .15 }}
                 >
-                    <div className="code-top"><span /><span /><span /><label>rakesh.ts</label></div>
+                    {/* <div className="code-top"><span /><span /><span /><label>rakesh.ts</label></div>
                     <pre><code><span className="muted">const</span> <span className="cyan">engineer</span> = {'{'}
                         {`  `}<span className="key">experience</span>: <span className="num">8+</span>,
                         {`  `}<span className="key">focus</span>: <span className="str">"React Native"</span>,
@@ -48,7 +49,8 @@ const HeroSection = ({ goTo }: IProps) => {
                         {`  `}<span className="key">backend</span>: [<span className="str">"Node.js"</span>, <span className="str">"MongoDB"</span>],
                         {`  `}<span className="key">architecture</span>: <span className="str">"Micro-frontends"</span>,
                         {`  `}<span className="key">mindset</span>: <span className="str">"Build. Learn. Improve."</span>
-                        {'}'};</code></pre>
+                        {'}'};</code></pre> */}
+                    <Phone />
                 </motion.div>
             </div>
             <button className="scroll-cue" onClick={() => goTo("about")}><ChevronDown size={18} /></button>

@@ -6,7 +6,8 @@ const Footer = () => {
         <footer>
             <div className="container footer-inner">
                 <p>© {new Date().getFullYear()} {profile.name}</p>
-                <p>Made with 💓 in India</p>
+                <p>"Build. Learn. Improve."</p>
+                <p>Made with ❤️ in India</p>
             </div>
         </footer>
     )
