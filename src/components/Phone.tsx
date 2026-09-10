@@ -1,7 +1,11 @@
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, SignalHighIcon, BatteryFullIcon, WifiHighIcon } from "lucide-react";
 import { profile } from "../configs";
 
 export const Phone = () => {
+    const [showAvatarPreview, setShowAvatarPreview] = useState(false);
+
     return (
         <div className="phonewrap enter">
             <div className="phone">
@@ -16,7 +20,53 @@ export const Phone = () => {
                         </span>
                     </div>
                     <div className="pbody">
-                        <div className="avatar">{profile.nickName}</div>
+                        <div
+                            className="avatar"
+                            onMouseEnter={() => setShowAvatarPreview(true)}
+                            onMouseLeave={() => setShowAvatarPreview(false)}
+                        >
+                            <img
+                                src={profile.url}
+                                alt={profile.nickName}
+                                width={64}
+                                height={64}
+                                style={{ borderRadius: 8 }}
+                            />
+                            <AnimatePresence>
+                                {showAvatarPreview && (
+                                    <motion.div
+                                        className="avatar-preview"
+                                        initial={{
+                                            opacity: 0,
+                                            scale: 0.8,
+                                            y: 10,
+                                        }}
+                                        animate={{
+                                            opacity: 1,
+                                            scale: 1,
+                                            y: 0,
+                                        }}
+                                        exit={{
+                                            opacity: 0,
+                                            scale: 0.8,
+                                            y: 10,
+                                        }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 350,
+                                            damping: 25,
+                                        }}
+                                        style={{ position: 'absolute', top: 0, left: 0 }}
+                                    >
+                                        <img
+                                            src={profile.url}
+                                            alt={profile.nickName}
+                                            style={{ width: 290, height: 590, borderRadius: 8 }}
+                                        />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
                         <div>
                             <div className="pname">{profile.name}</div>
                             <div className="prole">● {profile.role}</div>

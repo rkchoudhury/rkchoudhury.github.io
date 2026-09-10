@@ -811,6 +811,8 @@ footer {
   border-top: 1px solid var(--line);
   background: var(--code-bg);
   color: var(--muted);
+  border-radius: 5px;
+  margin: 10px 10px;
 
   font: 8.5px/1.9 var(--mono);
 }

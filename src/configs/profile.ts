@@ -7,4 +7,5 @@ export const profile = {
   email: "rkchoudhury96@gmail.com",
   phone: "",
   resume: "Rakesh_Choudhury_Mobile_Developer.pdf",
+  url: "https://avatars.githubusercontent.com/u/39880621?v=4",
 };
