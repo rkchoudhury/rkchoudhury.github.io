@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import Section from './Section';
-import { experience } from '../configs';
+import Section from '../common/section/Section';
+import { experience } from '../../configs';
+import "./style.css";
 
 const Experience = () => {
     return (

@@ -1,5 +1,6 @@
 import React from 'react'
-import { profile } from '../configs'
+import { profile } from '../../configs'
+import "./style.css";
 
 const Footer = () => {
     return (

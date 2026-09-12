@@ -1,0 +1,21 @@
+.contact {
+  padding: 150px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  position: relative;
+}
+.contact-inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact h2 {
+  margin-bottom: 15px;
+}
+.contact p:not(.eyebrow) {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+.big {
+  padding: 14px 22px;
+}

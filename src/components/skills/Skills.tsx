@@ -1,6 +1,7 @@
 import React from 'react'
-import Section from './Section';
-import { skills } from '../configs';
+import Section from '../common/section/Section';
+import { skills } from '../../configs';
+import "./style.css";
 
 const Skills = () => {
     return (

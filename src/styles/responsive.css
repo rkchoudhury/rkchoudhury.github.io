@@ -1,0 +1,94 @@
+@media (max-width: 900px) {
+  .hero-content,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .code-card {
+    max-width: 650px;
+    width: 100%;
+    transform: none;
+  }
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+  .nav {
+    min-height: 64px;
+  }
+  .brand strong {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(8, 9, 13, 0.97);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links button {
+    text-align: left;
+    padding: 10px;
+  }
+  .nav-links .nav-contact {
+    justify-content: center;
+    text-align: center;
+  }
+  .hero {
+    padding-top: 110px;
+  }
+  .hero h1 {
+    font-size: clamp(45px, 15vw, 70px);
+  }
+  .hero-copy {
+    font-size: 15px;
+  }
+  .socials {
+    flex-wrap: wrap;
+  }
+  .section {
+    padding: 85px 0;
+  }
+  .section h2,
+  .contact h2 {
+    margin-bottom: 38px;
+  }
+  .large-copy {
+    font-size: 20px;
+  }
+  .project-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    min-height: 360px;
+  }
+  .job-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .timeline-item {
+    padding-left: 30px;
+  }
+  .footer-inner {
+    flex-direction: column;
+  }
+}

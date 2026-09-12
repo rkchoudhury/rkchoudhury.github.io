@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+:root {
+  --bg: #0b0f14;
+  --panel: #0f151e;
+  --card: #121a26;
+  --text: #e8edf4;
+  --muted: #93a0b4;
+  --violet: #8b78ff;
+  --violet-soft: rgba(139, 120, 255, 0.14);
+  --violet-glow: rgba(139, 120, 255, 0.3);
+  --accent: #8b78ff;
+  --amber: #f5b75a;
+  --green: #3ddc84;
+  --line: rgba(148, 163, 184, 0.14);
+  --line-strong: rgba(148, 163, 184, 0.26);
+  --phone-screen-top: #101725;
+  --phone-screen-bottom: #0b0f14;
+  --chip-bg: rgba(148, 163, 184, 0.06);
+  --code-bg: #0a0e14;
+  --nav-surface: rgba(148, 163, 184, 0.04);
+  --phone-shadow: rgba(0, 0, 0, 0.55);
+  --avatar-text: #0b0f14;
+  --mono: "DM Mono", monospace;
+  --display: "Manrope", sans-serif;
+  --body: "Manrope", sans-serif;
+}

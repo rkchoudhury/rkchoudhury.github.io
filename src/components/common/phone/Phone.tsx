@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Linkedin, Mail, SignalHighIcon, BatteryFullIcon, WifiHighIcon, PhoneIcon } from "lucide-react";
-import { profile } from "../configs";
+import { profile } from "../../../configs";
+import "./style.css";
 
 export const Phone = () => {
     const [showAvatarPreview, setShowAvatarPreview] = useState(false);

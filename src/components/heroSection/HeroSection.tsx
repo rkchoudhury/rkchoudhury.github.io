@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Download, ChevronDown } from "lucide-react";
-import { profile } from '../configs';
-import { Phone } from './Phone';
+import { profile } from '../../configs';
+import { Phone } from '../common/phone/Phone';
+import "./style.css";
 
 interface IProps {
     goTo: (id: string) => void;

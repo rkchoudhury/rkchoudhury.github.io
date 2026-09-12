@@ -1,0 +1,6 @@
+@keyframes bob {
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
+/* The original CSS uses animation: float on .phone but did not define @keyframes float. */

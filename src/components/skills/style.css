@@ -1,0 +1,26 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+.skill-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 22px;
+  min-height: 220px;
+  border-radius: 10px;
+}
+.skill-card svg {
+  color: var(--accent);
+}
+.skill-card h3 {
+  margin: 18px 0;
+  font-size: 15px;
+}
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: var(--muted);
+  font: 11px var(--mono);
+}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import Section from './Section';
-import { projects } from '../configs';
+import Section from '../common/section/Section';
+import { projects } from '../../configs';
+import "./style.css";
 
 const Projects = () => {
     return (
