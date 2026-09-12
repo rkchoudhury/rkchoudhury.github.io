@@ -23,7 +23,7 @@ const Header = ({ menuOpen, setMenuOpen, goTo }: IProps) => {
                             {item}
                         </button>
                     ))}
-                    <button className="nav-contact" onClick={() => goTo("contact")}>Let's talk <ArrowUpRight size={15} /></button>
+                    <button className="nav-contact" onClick={() => goTo("contact")}>Get in touch <ArrowUpRight size={15} /></button>
                 </div>
 
                 <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">

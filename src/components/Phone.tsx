@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, SignalHighIcon, BatteryFullIcon, WifiHighIcon } from "lucide-react";
+import { Github, Linkedin, Mail, SignalHighIcon, BatteryFullIcon, WifiHighIcon, PhoneIcon } from "lucide-react";
 import { profile } from "../configs";
 
 export const Phone = () => {
@@ -103,9 +103,10 @@ export const Phone = () => {
                         <div>I/UX: retention +35%</div>
                     </div>
                     <div className="pnav">
-                        <a href={profile.github} target="_blank" rel="noreferrer"><Github size={12} /></a>
-                        <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={12} /></a>
+                        <a href={`tel:${profile.phone}`}><PhoneIcon size={12} /></a>
                         <a href={`mailto:${profile.email}`}><Mail size={12} /></a>
+                        <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={12} /></a>
+                        <a href={profile.github} target="_blank" rel="noreferrer"><Github size={12} /></a>
                     </div>
                 </div>
             </div>
