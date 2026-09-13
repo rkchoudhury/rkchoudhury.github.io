@@ -15,7 +15,7 @@ const Header = ({ menuOpen, setMenuOpen, goTo }: IProps) => {
             <nav className="nav container">
                 <button className="brand" onClick={() => goTo("home")}>
                     <span>{profile.nickName}</span>
-                    <strong>{profile.name}</strong>
+                    <span style={{ color: '#8b78ff' }}>.</span>
                 </button>
 
                 <div className={`nav-links ${menuOpen ? "open" : ""}`}>
