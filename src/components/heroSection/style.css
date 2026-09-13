@@ -24,14 +24,14 @@
 .orb-a {
   width: 420px;
   height: 420px;
-  background: #9dff48;
+  background: var(--violet);
   top: 10%;
   right: -180px;
 }
 .orb-b {
   width: 280px;
   height: 280px;
-  background: #6a78ff;
+  background: var(--violet);
   left: -160px;
   bottom: 5%;
 }

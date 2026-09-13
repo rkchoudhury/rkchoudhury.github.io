@@ -12,7 +12,7 @@
   border-radius: 40px;
   box-shadow:
     0 30px 80px var(--phone-shadow),
-    0 0 90px var(--violet-glow);
+    0 0 90px var(--violet-soft);
   animation: float 6s ease-in-out infinite;
 }
 .screen {

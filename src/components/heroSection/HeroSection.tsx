@@ -37,20 +37,10 @@ const HeroSection = ({ goTo }: IProps) => {
                 </motion.div>
 
                 <motion.div
-                    // className="code-card"
                     initial={{ opacity: 0, scale: .96 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: .8, delay: .15 }}
                 >
-                    {/* <div className="code-top"><span /><span /><span /><label>rakesh.ts</label></div>
-                    <pre><code><span className="muted">const</span> <span className="cyan">engineer</span> = {'{'}
-                        {`  `}<span className="key">experience</span>: <span className="num">8+</span>,
-                        {`  `}<span className="key">focus</span>: <span className="str">"React Native"</span>,
-                        {`  `}<span className="key">frontend</span>: [<span className="str">"React"</span>, <span className="str">"TypeScript"</span>],
-                        {`  `}<span className="key">backend</span>: [<span className="str">"Node.js"</span>, <span className="str">"MongoDB"</span>],
-                        {`  `}<span className="key">architecture</span>: <span className="str">"Micro-frontends"</span>,
-                        {`  `}<span className="key">mindset</span>: <span className="str">"Build. Learn. Improve."</span>
-                        {'}'};</code></pre> */}
                     <Phone />
                 </motion.div>
             </div>
