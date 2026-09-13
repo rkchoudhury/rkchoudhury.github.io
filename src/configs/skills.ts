@@ -4,17 +4,17 @@ export const skills = [
   {
     icon: Smartphone,
     title: "Mobile",
-    items: ["React Native", "Android", "Kotlin", "Java"],
+    items: ["React-Native", "Android", "Kotlin"],
   },
   {
     icon: Code2,
     title: "Frontend",
-    items: ["React JS", "JavaScript", "TypeScript", "React Hooks"],
+    items: ["React JS", "JavaScript", "TypeScript", "React Hooks", "Redux"],
   },
   {
     icon: Layers3,
     title: "Architecture",
-    items: ["Redux", "Redux Toolkit", "Redux Saga", "Re.Pack", "Tailwind CSS"],
+    items: ["MVVM", "Clean Architecture", "Micro-frontend", "Re.Pack"],
   },
   {
     icon: Database,

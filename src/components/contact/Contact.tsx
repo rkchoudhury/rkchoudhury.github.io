@@ -8,8 +8,9 @@ const Contact = () => {
         <section id="contact" className="contact">
             <div className="container contact-inner">
                 <p className="eyebrow">05 / CONTACT</p>
-                <h2>Have an interesting problem?</h2>
-                <p>Let's build something useful, reliable and a little bit delightful.</p>
+                <h2>Let's build something <em>useful.</em></h2>
+                <p> If you're building a mobile product or complex React Native
+                    experience, I'd be happy to connect.</p>
                 <div className="socials">
                     <a className="secondary" href={`mailto:${profile.email}`}><Mail size={18} /> Email</a>
                     <a className="secondary" href={`tel:${profile.phone}`}><Phone size={18} /> Phone</a>
