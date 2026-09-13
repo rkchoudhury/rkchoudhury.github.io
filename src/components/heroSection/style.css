@@ -42,29 +42,12 @@
   gap: 80px;
   align-items: center;
 }
-.availability {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  border-radius: 99px;
-  color: var(--muted);
-  font: 11px var(--mono);
-  margin-bottom: 28px;
-}
-.availability span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
-}
-.hero-kicker,
-.eyebrow {
-  font: 500 11px var(--mono);
-  color: var(--accent);
-  letter-spacing: 0.16em;
+.hero-kicker {
+  font: 12px var(--mono);
+  letter-spacing: 0.18em;
+  color: var(--violet);
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .hero h1 {
   max-width: 760px;
@@ -78,10 +61,11 @@
   color: var(--accent);
 }
 .hero-copy {
-  max-width: 590px;
+  max-width: 560px;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.8;
+  margin-bottom: 34px;
 }
 .hero-actions {
   display: flex;
@@ -116,62 +100,33 @@
 }
 .socials a {
   color: var(--muted);
-  font: 12px var(--mono);
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  justify-content: center;
+  border-radius: 10px;
 }
 .socials a:hover {
-  color: var(--text);
+  color: var(--violet);
+  border-color: var(--violet);
+  background: var(--soft);
 }
-.code-card {
-  background: rgba(15, 17, 23, 0.88);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  transform: rotate(1.5deg);
+.loc {
+  font: 12px var(--mono);
+  color: var(--muted);
+  margin-top: 25px;
 }
-.code-top {
-  height: 42px;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 0 14px;
-}
-.code-top span {
+.loc span {
+  display: inline-block;
   width: 7px;
   height: 7px;
+  background: var(--green);
   border-radius: 50%;
-  background: #383c45;
-}
-.code-top label {
-  margin-left: auto;
-  color: #656b77;
-  font: 10px var(--mono);
-}
-.code-card pre {
-  margin: 0;
-  padding: 25px;
-  overflow: auto;
-  font: 12px/2 var(--mono);
-  color: #c9ced8;
-}
-.muted {
-  color: #8f96a3;
-}
-.cyan {
-  color: #a6e3ff;
-}
-.key {
-  color: #d7a7ff;
-}
-.str {
-  color: #b7ff5a;
-}
-.num {
-  color: #ffbd7a;
+  margin-right: 8px;
+  box-shadow: 0 0 10px var(--green);
 }
 .scroll-cue {
   position: absolute;
