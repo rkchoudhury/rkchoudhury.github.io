@@ -1,0 +1,9 @@
+.scrollbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--violet), var(--green));
+  width: 0;
+}

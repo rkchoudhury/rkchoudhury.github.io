@@ -6,6 +6,7 @@ import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
+import ScrollBar from "./common/scrollbar/ScrollBar";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Skills,
   Contact,
   Footer,
+  ScrollBar,
 };
