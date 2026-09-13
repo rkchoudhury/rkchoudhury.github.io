@@ -4,7 +4,7 @@ export const skills = [
   {
     icon: Smartphone,
     title: "Mobile",
-    items: ["React-Native", "Android", "Kotlin"],
+    items: ["React-Native", "Android", "Kotlin", "Compose"],
   },
   {
     icon: Code2,
@@ -19,7 +19,7 @@ export const skills = [
   {
     icon: Database,
     title: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB"],
+    items: ["Node.js", "Express.js", "MongoDB", "Room DB", "Realm DB"],
   },
   {
     icon: TestTube2,

@@ -5,7 +5,7 @@ import "./style.css";
 
 const About = () => {
     return (
-        <Section id="about" eyebrow="01 / ABOUT" title="From product requirements to production">
+        <Section id="about" title="About" subTitle="From product requirements to production">
             <div className="about-grid">
                 <div>
                     <p className="body-copy">

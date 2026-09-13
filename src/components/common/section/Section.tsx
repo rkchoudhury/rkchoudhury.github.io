@@ -4,8 +4,8 @@ import "./style.css";
 
 interface IProps {
     id: string;
-    eyebrow: any;
     title: string;
+    subTitle: string;
     children: React.ReactNode;
 };
 
@@ -14,7 +14,7 @@ const reveal = {
     visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } }
 };
 
-const Section = ({ id, eyebrow, title, children }: IProps) => {
+const Section = ({ id, title, subTitle, children }: IProps) => {
     return (
         <section id={id} className="section">
             <motion.div
@@ -24,9 +24,11 @@ const Section = ({ id, eyebrow, title, children }: IProps) => {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
             >
-                <p className="eyebrow">{eyebrow}</p>
-                <h2>{title}</h2>
-                {children}
+                <h2 className='section-title'>{title}</h2>
+                <p className='section-subtitle'>{subTitle}</p>
+                <div className='section-content'>
+                    {children}
+                </div>
             </motion.div>
         </section>
     );

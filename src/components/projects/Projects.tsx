@@ -7,7 +7,7 @@ import "./style.css";
 
 const Projects = () => {
     return (
-        <Section id="projects" eyebrow="03 / PROJECTS" title="Things I've built.">
+        <Section id="projects" title="Projects" subTitle="Things I've built.">
             <div className="project-grid">
                 {projects.map((project, i) => (
                     <motion.article

@@ -6,7 +6,7 @@ import "./style.css";
 
 const Experience = () => {
     return (
-        <Section id="experience" eyebrow="02 / EXPERIENCE" title="Where I've built things.">
+        <Section id="experience" title="Experience" subTitle="Where I've built things.">
             <div className="timeline">
                 {experience.map((job, i) => (
                     <motion.article

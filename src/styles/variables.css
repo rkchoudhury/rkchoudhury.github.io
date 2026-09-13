@@ -20,7 +20,7 @@
   --nav-surface: rgba(148, 163, 184, 0.04);
   --phone-shadow: rgba(0, 0, 0, 0.55);
   --avatar-text: #0b0f14;
-  --mono: "DM Mono", monospace;
-  --display: "Manrope", sans-serif;
-  --body: "Manrope", sans-serif;
+  --display: Sora, sans-serif;
+  --body: Manrope, sans-serif;
+  --mono: "JetBrains Mono", monospace;
 }
