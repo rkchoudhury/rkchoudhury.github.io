@@ -43,6 +43,10 @@
   padding-left: 18px;
   margin-top: 22px;
   max-width: 780px;
+  list-style-type: square;
+}
+.timeline ul li::marker {
+  color: var(--accent);
 }
 .timeline li {
   color: var(--muted);
