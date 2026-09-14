@@ -6,7 +6,7 @@ import "./style.css";
 
 const Experience = () => {
     return (
-        <Section id="experience" title="Experience" subTitle="Where I've built things.">
+        <Section id="experience" title="Experience" subTitle="8+ years across three companies">
             <div className="timeline">
                 {experience.map((job, i) => (
                     <motion.article
@@ -20,10 +20,10 @@ const Experience = () => {
                         <div className="timeline-marker">{String(i + 1).padStart(2, "0")}</div>
                         <div className="timeline-main">
                             <div className="job-head">
-                                <div><h3>{job.role}</h3><p>{job.company} · {job.location}</p></div>
+                                <div><h3>{job.company}</h3><p>{job.role} · {job.location}</p></div>
                                 <time>{job.period}</time>
                             </div>
-                            <ul>{job.points.map((point) => <li key={point}>{point}</li>)}</ul>
+                            <ul>{job.points.map((point, index) => <li key={job.company + index}>{point}</li>)}</ul>
                         </div>
                     </motion.article>
                 ))}

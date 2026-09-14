@@ -18,7 +18,7 @@
   background: var(--bg);
   border-radius: 50%;
   color: var(--accent);
-  font: 9px var(--mono);
+  font: bold 9px var(--mono);
 }
 .job-head {
   display: flex;
@@ -27,12 +27,16 @@
 }
 .job-head h3 {
   margin: 0;
-  font-size: 21px;
+  font: 700 22px var(--display);
 }
-.job-head p,
-.job-head time {
+.job-head p {
   color: var(--muted);
-  font: 11px var(--mono);
+  font: 13px var(--mono);
+  margin-top: 8px;
+}
+.job-head time {
+  color: var(--amber);
+  font: 13px var(--mono);
   margin-top: 8px;
 }
 .timeline ul {
@@ -44,5 +48,5 @@
   color: var(--muted);
   line-height: 1.8;
   margin: 9px 0;
-  font-size: 13px;
+  font-size: 15px;
 }
