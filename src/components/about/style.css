@@ -1,0 +1,33 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 90px;
+}
+.body-copy {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 650px;
+}
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.fact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+.fact > span {
+  font: 13px var(--mono);
+  color: var(--amber);
+}
+.fact p {
+  font-size: 14.5px;
+  color: var(--muted);
+}
