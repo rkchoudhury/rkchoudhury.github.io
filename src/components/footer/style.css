@@ -7,9 +7,4 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-}
-.footer-inner div {
-  display: flex;
-  gap: 16px;
 }
