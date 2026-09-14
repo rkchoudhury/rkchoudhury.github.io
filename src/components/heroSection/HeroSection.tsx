@@ -10,7 +10,6 @@ interface IProps {
 }
 
 const HeroSection = ({ goTo }: IProps) => {
-    const firstName = profile.name.split(" ")?.[0]?.toUpperCase() ?? "";
     return (
         <section id="home" className="hero">
             <div className="hero-grid" />
@@ -19,7 +18,6 @@ const HeroSection = ({ goTo }: IProps) => {
             <div className="container hero-content">
                 <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
                     <p className="hero-kicker">React Native · TypeScript · 8+ years</p>
-                    {/* <h1>Building <em>mobile</em> experiences that scale.</h1> */}
                     <h1 className="enter">
                         I build mobile experiences that <em>scale.</em>
                     </h1>

@@ -19,3 +19,21 @@
 .big {
   padding: 14px 22px;
 }
+
+.contact-social {
+  display: flex;
+  gap: 20px;
+  margin-top: 28px;
+}
+.contact-social a {
+  color: var(--muted);
+  font: 12px var(--mono);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.contact-social a:hover {
+  color: var(--violet);
+  border-color: var(--violet);
+  background: var(--soft);
+}
