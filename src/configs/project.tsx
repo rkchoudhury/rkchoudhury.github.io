@@ -39,6 +39,7 @@ const projects = [
 const personalProjects = [
     {
         title: "DevTinder",
+        icon: "🤝",
         type: "Web & Mobile • Full Stack",
         period: "May 2025 — Dec 2025",
         stack: ["React", "Node.js", "MongoDB", "Socket.io"],
@@ -48,6 +49,7 @@ const personalProjects = [
     },
     {
         title: "Netflix Clone",
+        icon: "🎬",
         type: "Web Application",
         period: "Jan 2024 — Feb 2024",
         stack: ["React", "Redux Toolkit", "Tailwind CSS"],
@@ -57,6 +59,7 @@ const personalProjects = [
     },
     {
         title: "Food Ordering App",
+        icon: "🍔",
         type: "Android Application",
         period: "Aug 2023 — Dec 2023",
         stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],

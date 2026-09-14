@@ -18,7 +18,7 @@ export const skills = [
   },
   {
     icon: Database,
-    title: "Backend",
+    title: "Backend & Database",
     items: ["Node.js", "Express.js", "MongoDB", "Room DB", "Realm DB"],
   },
   {

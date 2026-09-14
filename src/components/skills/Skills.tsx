@@ -5,7 +5,7 @@ import "./style.css";
 
 const Skills = () => {
     return (
-        <Section id="skills" title="Skills" subTitle="Technologies I work with.">
+        <Section id="skills" title="Skills" subTitle="Technologies I work with">
             <div className="skills-grid">
                 {skills.map((skill) => {
                     const Icon = skill.icon;

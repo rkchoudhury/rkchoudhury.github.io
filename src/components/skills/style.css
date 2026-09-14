@@ -22,5 +22,5 @@
   flex-direction: column;
   gap: 9px;
   color: var(--muted);
-  font: 11px var(--mono);
+  font: 14px var(--mono);
 }
