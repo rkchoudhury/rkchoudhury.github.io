@@ -10,29 +10,35 @@
   flex-direction: column;
 }
 .contact h2 {
-  margin-bottom: 15px;
+  font: 700 clamp(28px, 3.4vw, 40px) var(--display);
+  margin: 0;
 }
-.contact p:not(.eyebrow) {
+.contact h3 {
+  font: 700 clamp(22px, 3.2vw, 32px) var(--display);
+  margin: 16px 0 14px;
+}
+.contact h3 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.contact p {
   color: var(--muted);
-  margin-bottom: 28px;
+  max-width: 560px;
+  margin: 10px auto 15px;
 }
-.big {
-  padding: 14px 22px;
-}
-
-.contact-social {
+.contact-socials {
   display: flex;
   gap: 20px;
   margin-top: 28px;
 }
-.contact-social a {
+.contact-socials a {
   color: var(--muted);
   font: 12px var(--mono);
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.contact-social a:hover {
+.contact-socials a:hover {
   color: var(--violet);
   border-color: var(--violet);
   background: var(--soft);

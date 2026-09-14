@@ -64,6 +64,10 @@
   .socials {
     flex-wrap: wrap;
   }
+  .contact-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .section {
     padding: 85px 0;
   }
