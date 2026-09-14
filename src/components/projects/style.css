@@ -4,14 +4,24 @@
   gap: 15px;
 }
 .project-card {
-  min-height: 410px;
   display: flex;
   flex-direction: column;
   background: var(--panel);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 25px;
   position: relative;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+}
+.project-top small {
+  font: 12px var(--mono);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 3px 9px;
+  color: var(--muted);
 }
 .project-number {
   color: #444a56;
@@ -23,28 +33,30 @@
   margin-top: 45px;
 }
 .project-card h3 {
-  font-size: 28px;
-  margin: 9px 0 12px;
-  letter-spacing: -0.04em;
+  font: 700 18px var(--display);
+  margin-bottom: 0;
 }
 .project-card p {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
+  flex: 1;
 }
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-top: auto;
-  padding-top: 22px;
+  padding-top: 12px;
 }
 .tags span {
   border: 1px solid var(--line);
-  color: #b3b8c2;
-  padding: 5px 7px;
-  border-radius: 5px;
-  font: 9px var(--mono);
+  padding: 4px 9px;
+  border-radius: 99px;
+  font: 12px var(--mono);
+  color: var(--muted);
+  background: var(--violet-soft);
+  font-style: normal;
 }
 .project-footer {
   display: flex;

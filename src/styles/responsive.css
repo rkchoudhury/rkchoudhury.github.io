@@ -78,9 +78,6 @@
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  .project-card {
-    min-height: 360px;
-  }
   .job-head {
     flex-direction: column;
     gap: 8px;
