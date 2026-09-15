@@ -2,7 +2,7 @@
 
 This document describes the deployment strategy used to publish the portfolio to **GitHub Pages**.
 
-The deployment process is intentionally designed around **version-based releases** so that merging regular code changes into `main` does not automatically create a new production deployment.
+The deployment process is intentionally designed around **version-based releases** so that regular code changes merged into `main` do not automatically create a new production deployment.
 
 ---
 
@@ -26,8 +26,10 @@ The production build is generated using Vite and deployed through GitHub Actions
 
 The deployment workflow supports two deployment paths:
 
-1. **Automatic deployment** after a Pull Request is merged into `main` with a version change.
+1. **Automatic deployment** when changes are pushed to `main` and the `package.json` version has changed.
 2. **Manual deployment** through GitHub Actions.
+
+Since `main` is protected and changes are expected to go through Pull Requests, merging a PR into `main` creates the push event that triggers the deployment workflow.
 
 The overall flow is:
 
@@ -42,6 +44,9 @@ Code Review
       │
       ▼
 Merge into main
+      │
+      ▼
+Push to main
       │
       ▼
 GitHub Actions
@@ -67,21 +72,21 @@ GitHub Pages
 
 ## 🔄 Automatic Deployment
 
-Automatic deployment is triggered when a Pull Request targeting `main` is **merged**.
+Automatic deployment is triggered by a **push to the `main` branch**.
 
-The workflow does not deploy every time code is merged.
-
-Instead, it compares the version in `package.json` with the version from the previous `main` commit.
+The workflow then compares the version in `package.json` with the version from the previous `main` commit.
 
 ### Deployment Conditions
 
-| Condition                     | Deployment                 |
-| ----------------------------- | -------------------------- |
-| PR merged + version changed   | ✅ Deploy                  |
-| PR merged + version unchanged | ❌ Skip                    |
-| PR closed without merging     | ❌ Skip                    |
-| Manual workflow execution     | ✅ Deploy                  |
-| Direct push to `main`         | ❌ No automatic deployment |
+| Condition                                 | Deployment  |
+| ----------------------------------------- | ----------- |
+| PR merged into `main` + version changed   | ✅ Deploy   |
+| PR merged into `main` + version unchanged | ❌ Skip     |
+| Direct push to `main` + version changed   | ✅ Deploy\* |
+| Direct push to `main` + version unchanged | ❌ Skip     |
+| Manual workflow execution                 | ✅ Deploy   |
+
+\*Direct pushes to `main` should be prevented through branch protection. The normal production flow is through Pull Requests.
 
 The repository should therefore use Pull Requests as the normal mechanism for changes to `main`.
 
@@ -107,7 +112,7 @@ When preparing a new production release, increment the version:
 }
 ```
 
-The workflow detects this change and automatically deploys the new production build after the PR is merged.
+When the change is merged into `main`, GitHub Actions detects the version change and automatically deploys the new production build.
 
 ---
 
@@ -129,6 +134,8 @@ After the Pull Request is merged:
 
 ```text
 PR merged
+    ↓
+Push to main
     ↓
 GitHub Actions starts
     ↓
@@ -166,6 +173,8 @@ After merging:
 
 ```text
 PR merged
+    ↓
+Push to main
     ↓
 GitHub Actions starts
     ↓
@@ -236,11 +245,13 @@ The recommended development and release process is:
         ↓
 6. Merge PR into main
         ↓
-7. GitHub Actions detects version change
+7. Push event triggers GitHub Actions
         ↓
-8. Production build
+8. Version change is detected
         ↓
-9. Deploy to GitHub Pages
+9. Production build
+        ↓
+10. Deploy to GitHub Pages
 ```
 
 For example:
@@ -254,7 +265,9 @@ Version: 1.0.8 → 1.0.9
       ↓
 Pull Request
       ↓
-Merge
+Merge into main
+      ↓
+Push event
       ↓
 Automatic deployment
 ```
@@ -282,15 +295,23 @@ Typical usage:
 
 ```text
 PATCH
+
 1.0.7 → 1.0.8
+
 Bug fixes, small changes, content updates
 
+
 MINOR
+
 1.0.8 → 1.1.0
+
 New features or significant improvements
 
+
 MAJOR
+
 1.1.0 → 2.0.0
+
 Major redesigns or breaking changes
 ```
 
@@ -306,39 +327,31 @@ The deployment workflow is located at:
 .github/workflows/deploy.yml
 ```
 
-The workflow supports:
+The workflow is triggered by:
 
 ```yaml
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types:
-      - closed
 
   workflow_dispatch:
 ```
 
 This means the workflow can start when:
 
-- A Pull Request targeting `main` is closed
+- Changes are pushed to `main`
 - A user manually starts the workflow
 
-The job itself verifies that the Pull Request was actually merged:
+The `push` event is what triggers the automatic deployment after a Pull Request is merged.
 
-```yaml
-if: >
-  github.event_name == 'workflow_dispatch' ||
-  github.event.pull_request.merged == true
-```
-
-Therefore, simply closing a Pull Request without merging it does not result in a deployment.
+A merged Pull Request results in a new commit on `main`, which generates the required `push` event.
 
 ---
 
 ## 🔍 Version Check
 
-For an automatically triggered Pull Request workflow, the current version is compared with the version from the previous `main` commit.
+For an automatically triggered workflow, the current version is compared with the version from the previous `main` commit.
 
 Conceptually:
 
@@ -372,15 +385,19 @@ If both versions are identical:
 Skip deployment
 ```
 
+The workflow checks only the version value rather than whether any other part of `package.json` changed.
+
 ---
 
 ## 🏗️ Build Process
 
-When deployment is approved, the workflow performs the following steps:
+When deployment is approved, the workflow performs the following steps.
 
 ### 1. Checkout
 
-The latest `main` branch is checked out.
+The commit that triggered the workflow is checked out.
+
+For automatic deployments, this is the latest commit on `main`.
 
 ### 2. Install Dependencies
 
@@ -459,23 +476,38 @@ These permissions allow the workflow to:
 
 ## 🔒 Branch Protection
 
-Because automatic deployment is based on Pull Request merges, `main` should ideally be protected from direct pushes.
+Because the deployment strategy is designed around Pull Requests, the `main` branch should be protected from direct pushes.
 
-Recommended repository configuration:
+Recommended configuration:
 
 ```text
 Feature Branch
       ↓
 Pull Request
       ↓
-Required Review
+Code Review
       ↓
 Merge into main
+      ↓
+Push event
+      ↓
+GitHub Actions
 ```
 
-This ensures that production deployments follow the intended release process.
+Recommended `main` branch settings:
 
-A direct push to `main` does not trigger the deployment workflow.
+- Require a Pull Request before merging
+- Do not allow force pushes
+- Do not allow branch deletion
+- Required approvals are optional for a personal repository
+
+For this portfolio, required approvals can remain disabled because the repository may be maintained by a single developer.
+
+Branch protection ensures that the normal production deployment flow is:
+
+```text
+Pull Request → Merge → Push to main → Deployment Check
+```
 
 ---
 
@@ -505,15 +537,34 @@ This helps catch build-time issues before merging a release.
 Check:
 
 1. The PR was actually merged into `main`.
-2. The workflow file exists at:
+2. The merge resulted in a push to `main`.
+3. The workflow file exists at:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-3. The `package.json` version changed compared with the previous `main` commit.
-4. GitHub Pages is configured to use **GitHub Actions**.
-5. The GitHub Actions workflow completed successfully.
+4. The `package.json` version changed compared with the previous `main` commit.
+5. GitHub Pages is configured to use **GitHub Actions**.
+6. The `github-pages` environment allows deployments from `main`.
+7. The GitHub Actions workflow completed successfully.
+
+---
+
+### Workflow ran but deployment was skipped
+
+Check the version values displayed in the workflow logs.
+
+For example:
+
+```text
+Previous version: 1.0.8
+Current version:  1.0.8
+```
+
+This is expected behavior.
+
+The workflow intentionally skips the deployment when the version has not changed.
 
 ---
 
@@ -549,6 +600,30 @@ Manual execution bypasses the automatic version check.
 
 ---
 
+### Deployment rejected by GitHub Pages environment
+
+If GitHub Pages reports an error similar to:
+
+```text
+Branch "refs/pull/.../merge" is not allowed to deploy
+to github-pages due to environment protection rules.
+```
+
+the workflow is likely running from a Pull Request reference instead of `main`.
+
+The current deployment workflow avoids this by using:
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+```
+
+Therefore, automatic deployments run from the actual `main` branch context rather than the Pull Request merge reference.
+
+---
+
 ## 📋 Deployment Checklist
 
 Before releasing a new version:
@@ -561,6 +636,8 @@ Before releasing a new version:
 ☐ Pull Request created
 ☐ Pull Request reviewed
 ☐ Pull Request merged into main
+☐ Push to main triggers GitHub Actions
+☐ Version change detected
 ☐ GitHub Actions deployment completed
 ☐ Production site verified
 ```
@@ -574,7 +651,11 @@ The deployment strategy intentionally separates **development changes** from **p
 ```text
 Code changes
      ↓
-PR merge
+Pull Request
+     ↓
+Merge into main
+     ↓
+Push event
      ↓
 Version changed?
    ↙       ↘
