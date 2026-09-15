@@ -4,7 +4,7 @@ export const skills = [
   {
     icon: Smartphone,
     title: "Mobile",
-    items: ["React-Native", "Android", "Kotlin", "Compose"],
+    items: ["React Native", "Android", "Kotlin", "Compose"],
   },
   {
     icon: Code2,
