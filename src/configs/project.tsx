@@ -45,7 +45,7 @@ const personalProjects = [
         stack: ["React", "Node.js", "MongoDB", "Socket.io"],
         description:
             "A full-stack platform that helps developers connect, interact and collaborate, with real-time chat and payment integration.",
-        github: profile.github,
+        github: profile.github + "/devTinder",
     },
     {
         title: "Netflix Clone",
@@ -55,7 +55,7 @@ const personalProjects = [
         stack: ["React", "Redux Toolkit", "Tailwind CSS"],
         description:
             "A Netflix-inspired React application featuring debounced search, caching, API polling chat and n-level nested comments.",
-        github: profile.github,
+        github: profile.github + "/devTinder",
     },
     {
         title: "Food Ordering App",
@@ -65,7 +65,7 @@ const personalProjects = [
         stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
         description:
             "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
-        github: profile.github,
+        github: profile.github + "/devTinder",
     },
 ];
 
