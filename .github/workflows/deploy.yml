@@ -1,6 +1,12 @@
 name: Deploy Portfolio
 
 on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
   workflow_dispatch:
 
 permissions:
@@ -9,11 +15,18 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   deploy:
+    # Run for:
+    # 1. Manual workflow execution
+    # 2. A PR that was actually merged into main
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.pull_request.merged == true
+
     runs-on: ubuntu-latest
 
     environment:
@@ -21,29 +34,66 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
         with:
-          node-version: 20
-          cache: npm
+          ref: main
+          fetch-depth: 2
+
+      - name: Check package version
+        id: version-check
+        if: github.event_name == 'pull_request'
+        run: |
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+
+          PREVIOUS_VERSION=$(git show HEAD^:package.json | node -e "
+            let data = '';
+            process.stdin.on('data', chunk => data += chunk);
+            process.stdin.on('end', () => {
+              console.log(JSON.parse(data).version);
+            });
+          ")
+
+          echo "Previous version: $PREVIOUS_VERSION"
+          echo "Current version:  $CURRENT_VERSION"
+
+          if [ "$CURRENT_VERSION" != "$PREVIOUS_VERSION" ]; then
+            echo "Version changed. Deployment will continue."
+            echo "version_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version did not change. Skipping deployment."
+            echo "version_changed=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Install dependencies
+        if: >
+          github.event_name == 'workflow_dispatch' ||
+          steps.version-check.outputs.version_changed == 'true'
         run: npm ci
 
       - name: Build
+        if: >
+          github.event_name == 'workflow_dispatch' ||
+          steps.version-check.outputs.version_changed == 'true'
         run: npm run build
 
       - name: Setup GitHub Pages
+        if: >
+          github.event_name == 'workflow_dispatch' ||
+          steps.version-check.outputs.version_changed == 'true'
         uses: actions/configure-pages@v5
 
       - name: Upload build
+        if: >
+          github.event_name == 'workflow_dispatch' ||
+          steps.version-check.outputs.version_changed == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 
       - name: Deploy to GitHub Pages
+        if: >
+          github.event_name == 'workflow_dispatch' ||
+          steps.version-check.outputs.version_changed == 'true'
         id: deployment
         uses: actions/deploy-pages@v4
