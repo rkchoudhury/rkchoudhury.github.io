@@ -1,5 +1,16 @@
 import { useCallback, useState } from "react";
-import { About, Contact, Experience, Footer, Header, HeroSection, Projects, ScrollBar, Skills } from "./components";
+import {
+  About,
+  Contact,
+  Education,
+  Experience,
+  Footer,
+  Header,
+  HeroSection,
+  Projects,
+  ScrollBar,
+  Skills,
+} from "./components";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,6 +34,7 @@ function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Education />
         <Contact />
       </main>
 

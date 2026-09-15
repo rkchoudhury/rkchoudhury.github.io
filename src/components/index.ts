@@ -7,6 +7,7 @@ import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import ScrollBar from "./common/scrollbar/ScrollBar";
+import Education from "./education/Education";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   Contact,
   Footer,
   ScrollBar,
+  Education,
 };
