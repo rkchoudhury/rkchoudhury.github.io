@@ -6,11 +6,15 @@ import "./style.css";
 
 const Projects = () => {
     return (
-        <Section id="projects" title="Projects" subTitle="Selected work">
+        <Section id="projects" title="Projects" subTitle="">
+            <h4>Professional Work</h4>
             <div className="project-grid">
                 {projects.map((project, index) => (
                     <ProjectCard key={`${project.title}-${index}`} {...project} />
                 ))}
+            </div>
+            <h4>Personal Projects</h4>
+            <div className="project-grid">
                 {personalProjects.map((project, index) => (
                     <ProjectCard key={`${project.title}-${index}`} {...project} />
                 ))}
