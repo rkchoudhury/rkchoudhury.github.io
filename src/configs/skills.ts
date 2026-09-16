@@ -4,12 +4,12 @@ export const skills = [
   {
     icon: Smartphone,
     title: "Mobile",
-    items: ["React Native", "Android", "Kotlin", "Compose"],
+    items: ["React Native", "Android", "Kotlin", "Jetpack Compose"],
   },
   {
     icon: Code2,
     title: "Frontend",
-    items: ["React JS", "JavaScript", "TypeScript", "React Hooks", "Redux"],
+    items: ["React", "JavaScript", "TypeScript", "React Hooks", "Redux"],
   },
   {
     icon: Layers3,

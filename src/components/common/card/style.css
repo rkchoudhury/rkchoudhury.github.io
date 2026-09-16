@@ -37,6 +37,9 @@
   line-height: 1.8;
   flex: 1;
 }
+.project-card p strong {
+  color: var(--amber);
+}
 .tags {
   display: flex;
   flex-wrap: wrap;
