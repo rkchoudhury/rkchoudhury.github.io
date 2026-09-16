@@ -17,6 +17,11 @@ const Skills = () => {
                     );
                 })}
             </div>
+            <p className="skills-note">
+                <strong>Beyond my core experience:</strong> I've explored Android,
+                Kotlin, Jetpack Compose and Node.js through hands-on projects, and I'm
+                keen to apply and deepen these skills in production environments.
+            </p>
         </Section>
     );
 }
