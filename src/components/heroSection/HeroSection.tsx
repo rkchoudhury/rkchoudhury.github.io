@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Linkedin, Mail, Download, ChevronDown, PhoneIcon } from "lucide-react";
 import { profile } from '../../configs';

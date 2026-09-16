@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../common/section/Section';
 import "./style.css";
 import { profile } from '../../configs';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { profile } from '../../configs';
 import "./style.css";

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Github, Linkedin, Mail, Phone, Download } from "lucide-react";
 import { profile } from '../../configs';
 import "./style.css";

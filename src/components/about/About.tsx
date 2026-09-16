@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../common/section/Section';
 import { highlightedFacts } from '../../configs';
 import "./style.css";

@@ -1,4 +1,3 @@
-import React from 'react';
 import Section from '../common/section/Section';
 import ProjectCard from '../common/card/Card';
 import { projects, personalProjects } from '../../configs';
