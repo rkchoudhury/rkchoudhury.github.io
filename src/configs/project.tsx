@@ -2,7 +2,7 @@ import { profile } from "./profile";
 
 const projects = [
     {
-        title: "Bangkok Bank Mobile Banking",
+        title: "Mobile Banking Platform", // "Bangkok Bank Mobile Banking",
         icon: "🏦",
         organisation: "EY GDS",
         stack: ["React Native", "Micro-Frontend", "Re.Pack"],

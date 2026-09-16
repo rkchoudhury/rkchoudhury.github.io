@@ -18,10 +18,15 @@ export const experience = [
         seamless integration and delivery.
       </>,
       <>
-        Worked on <strong>Bangkok Bank Mobile Banking</strong> and gained
+        Worked on an <strong>enterprise mobile banking platform</strong> and gained
         practical exposure to <strong>Re.Pack</strong> and micro-frontend
         architecture.
       </>,
+      // <>
+      //   Worked on <strong>Bangkok Bank Mobile Banking</strong> and gained
+      //   practical exposure to <strong>Re.Pack</strong> and micro-frontend
+      //   architecture.
+      // </>,
     ],
   },
   {
