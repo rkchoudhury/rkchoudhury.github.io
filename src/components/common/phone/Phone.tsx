@@ -14,7 +14,7 @@ export const Phone = () => {
                     <div className="status">
                         <span>10:45</span>
                         <span className="status-icons">
-                            5G
+                            <span>5G</span>
                             <SignalHighIcon size={10} />
                             <WifiHighIcon size={10} />
                             <BatteryFullIcon size={12} />
@@ -28,7 +28,7 @@ export const Phone = () => {
                         >
                             <img
                                 src={profile.url}
-                                alt={profile.nickName}
+                                alt={`${profile.name} profile`}
                                 width={64}
                                 height={64}
                                 style={{ borderRadius: 8 }}
@@ -85,29 +85,25 @@ export const Phone = () => {
                             </div>
                             <div>
                                 <b>50+</b>
-                                <small>JS files</small>
+                                <small>files migrated</small>
                             </div>
                             <div>
                                 <b>40%</b>
                                 <small>fewer errors</small>
                             </div>
-                            <div>
-                                <b>35%</b>
-                                <small>retention</small>
-                            </div>
                         </div>
                     </div>
                     <div className="plog">
-                        <div>I/EY: reusable RN components</div>
-                        <div>D/BLE: controller data streaming</div>
-                        <div>I/TS: 50+ files migrated</div>
-                        <div>I/UX: retention +35%</div>
+                        <div>› RN: reusable components</div>
+                        <div>› BLE: controller data</div>
+                        <div>› TS: 50+ files migrated</div>
+                        <div>› MFE: Re.Pack exposure</div>
                     </div>
                     <div className="pnav">
-                        <a href={`tel:${profile.phone}`}><PhoneIcon size={12} /></a>
-                        <a href={`mailto:${profile.email}`}><Mail size={12} /></a>
-                        <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={12} /></a>
-                        <a href={profile.github} target="_blank" rel="noreferrer"><Github size={12} /></a>
+                        <a href={`tel:${profile.phone}`} aria-label="Call Rakesh"><PhoneIcon size={12} /></a>
+                        <a href={`mailto:${profile.email}`} aria-label="Email Rakesh"><Mail size={12} /></a>
+                        <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile"><Linkedin size={12} /></a>
+                        <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub profile"><Github size={12} /></a>
                     </div>
                 </div>
             </div>
