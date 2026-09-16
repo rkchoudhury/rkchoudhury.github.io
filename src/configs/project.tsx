@@ -6,33 +6,37 @@ const projects = [
         icon: "🏦",
         organisation: "EY GDS",
         stack: ["React Native", "Micro-Frontend", "Re.Pack"],
-        description:
+        description: (
             <>
-                Reusable React Native components/plugins with <strong>Re.Pack</strong>{" "}
-                micro-frontend exposure.
-            </>,
+                Built reusable React Native components and integrations with practical
+                exposure to <strong>Re.Pack</strong> micro-frontend architecture.
+            </>
+        ),
     },
     {
         title: "BMS Startup",
         icon: "📡",
         organisation: "Honeywell",
         stack: ["React Native", "BLE", "TypeScript"],
-        description:
+        description: (
             <>
-                BLE controller communication and a TypeScript migration across{" "}
-                <strong>50+ files</strong>.
-            </>,
+                Implemented BLE controller communication and migrated{" "}
+                <strong>50+ JavaScript files to TypeScript</strong>, reducing runtime
+                errors by <strong>40%</strong>.
+            </>
+        ),
     },
     {
         title: "Healthcare Apps",
-        icon: "💬",
+        icon: "💊",
         organisation: "Tech Mahindra",
         stack: ["React Native", "Jitsi", "Twilio", "Maps"],
-        description:
+        description: (
             <>
-                Video consultation, mapping and chat experiences across MyBSWHealth and
-                BSW Virtual.
-            </>,
+                Built video consultation, mapping and chat experiences across{" "}
+                <strong>MyBSWHealth</strong> and <strong>BSW Virtual</strong>.
+            </>
+        ),
     },
 ];
 
@@ -40,33 +44,53 @@ const personalProjects = [
     {
         title: "DevTinder",
         icon: "🤝",
-        type: "Web & Mobile • Full Stack",
+        type: "Web & Mobile · Full Stack",
         period: "May 2025 — Dec 2025",
-        stack: ["React", "Node.js", "MongoDB", "Socket.io"],
-        description:
-            "A full-stack platform that helps developers connect, interact and collaborate, with real-time chat and payment integration.",
-        github: profile.github,
+        stack: ["React Native", "React", "Node.js", "MongoDB", "Socket.io"],
+        description: (
+            <>
+                A <strong>full-stack</strong> platform for developers to connect
+                and collaborate, featuring real-time chat, authentication and
+                payment integration.
+            </>
+        ),
+        github: profile.github + "/devTinder",
     },
     {
-        title: "Netflix Clone",
+        title: "Movie Hub",
+        icon: "🎞️",
+        type: "Android Application",
+        period: "Feb 2025 — Apr 2025",
+        stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
+        description: (
+            <>
+                An Android application built with <strong>Kotlin</strong> and{" "}
+                <strong>Jetpack Compose</strong>, featuring movie search,
+                filtering, navigation and local persistence with Room Database.
+            </>
+        ),
+        github: profile.github + "/movie-hub",
+    },
+    {
+        title: "Netflix GPT",
         icon: "🎬",
         type: "Web Application",
         period: "Jan 2024 — Feb 2024",
         stack: ["React", "Redux Toolkit", "Tailwind CSS"],
         description:
-            "A Netflix-inspired React application featuring debounced search, caching, API polling chat and n-level nested comments.",
-        github: profile.github,
+            "A Netflix-inspired React application featuring debounced search, caching, API-based chat and n-level nested comments.",
+        github: profile.github + "/netflix-gpt",
     },
-    {
-        title: "Food Ordering App",
-        icon: "🍔",
-        type: "Android Application",
-        period: "Aug 2023 — Dec 2023",
-        stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
-        description:
-            "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
-        github: profile.github,
-    },
+    // {
+    //     title: "Food Ordering App",
+    //     icon: "🍔",
+    //     type: "Android Application",
+    //     period: "Aug 2023 — Dec 2023",
+    //     stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
+    //     description:
+    //         "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
+    //     github: profile.github + "/little-lemon-app",
+    // },
 ];
 
 export { projects, personalProjects };

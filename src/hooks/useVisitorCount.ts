@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { visitor } from "../configs";
+import { isDevMode } from "../utils/dev";
 
 export const useVisitorCount = () => {
   const [visitorCount, setVisitorCount] = useState<number | null>(null);
@@ -10,7 +11,7 @@ export const useVisitorCount = () => {
 
       try {
         const seen = sessionStorage.getItem(sessionKey) === "1";
-        const type = seen ? "get" : "hit";
+        const type = seen || isDevMode ? "get" : "hit";
 
         const response = await fetch(
           `https://abacus.jasoncameron.dev/${type}/${namespace}/${key}`,
