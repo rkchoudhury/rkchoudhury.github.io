@@ -8,6 +8,9 @@ export const profile = {
   phone: "+91 9916321521",
   resume: "Rakesh_Choudhury_Mobile_Developer.pdf",
   url: "https://avatars.githubusercontent.com/u/39880621?v=4",
+  college: "Indira Gandhi Institute of Technology, Sarang, Odisha",
+  education: "B.Tech, Computer Science Engineering",
+  educationYear: "Aug 2013 - May 2017",
 };
 
 export const highlightedFacts = [

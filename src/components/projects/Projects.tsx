@@ -6,7 +6,7 @@ import "./style.css";
 
 const Projects = () => {
     return (
-        <Section id="projects" title="Projects" subTitle="">
+        <Section id="projects" title="Projects" subTitle="Selected work">
             <h4>Professional Work</h4>
             <div className="project-grid">
                 {projects.map((project, index) => (

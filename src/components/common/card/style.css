@@ -60,8 +60,8 @@
   border-top: 1px solid var(--line);
   margin-top: 22px;
   padding-top: 15px;
-  color: #6e7480;
-  font: 9px var(--mono);
+  color: var(--muted);
+  font: 10px var(--mono);
 }
 .project-footer a {
   color: var(--text);
