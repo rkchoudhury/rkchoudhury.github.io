@@ -16,7 +16,7 @@ export const profile = {
 export const highlightedFacts = [
   {
     label: "Architecture",
-    text: "Reusable React Native components and modular integration",
+    text: "Reusable React Native components and modular application integration",
   },
   {
     label: "Reliability",
@@ -24,10 +24,14 @@ export const highlightedFacts = [
   },
   {
     label: "Mobile",
-    text: "React Native, Android, BLE, responsive UI and native integrations",
+    text: "React Native, Android, BLE and native integrations",
   },
   {
-    label: "Full stack",
-    text: "React frontend with Node.js, Express and MongoDB",
+    label: "Backend",
+    text: "Node.js, Express and MongoDB through full-stack projects",
   },
+  // {
+  //   label: "Android",
+  //   text: "Kotlin, Jetpack Compose and native Android development",
+  // },
 ];

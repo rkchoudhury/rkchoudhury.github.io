@@ -9,22 +9,22 @@ const About = () => {
             <div className="about-grid">
                 <div>
                     <p className="body-copy">
-                        I'm a mobile-focused software engineer with{" "}
-                        <strong>8+ years of industry experience</strong>, specializing in
-                        React Native, React and Android.
+                        I'm a mobile-focused <strong>Senior Software Engineer</strong>{" "}
+                        with <strong>8+ years of industry experience</strong>,
+                        specializing in React Native, React and Android.
                     </p>
                     <p className="body-copy">
                         At <strong>EY GDS</strong>, I work on scalable React Native
                         applications, reusable components and third-party integrations,
-                        including exposure to <strong>Re.Pack</strong> micro-frontend
+                        with exposure to <strong>Re.Pack</strong> and micro-frontend
                         architecture.
                     </p>
                     <p className="body-copy">
-                        Previously at <strong>Honeywell</strong>, I worked on
-                        HMI/controller applications, BLE communication and a TypeScript
+                        Previously at <strong>Honeywell</strong>, I worked on HMI and
+                        controller applications, BLE communication and a TypeScript
                         migration that reduced runtime errors by <strong>40%</strong>.
-                        Earlier, at <strong>Tech Mahindra</strong>, I built healthcare
-                        experiences with video, maps and chat.
+                        Earlier at <strong>Tech Mahindra</strong>, I built healthcare
+                        applications featuring video, maps and chat.
                     </p>
                 </div>
                 <div className="facts">

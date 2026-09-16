@@ -17,7 +17,7 @@ const HeroSection = ({ goTo }: IProps) => {
             <div className="orb orb-b" />
             <div className="container hero-content">
                 <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }}>
-                    <p className="hero-kicker">React Native · TypeScript · 8+ years</p>
+                    <p className="hero-kicker">React Native · TypeScript · Android · 8+ years</p>
                     <h1 className="enter">
                         I build mobile experiences that <em>scale.</em>
                     </h1>
@@ -25,10 +25,10 @@ const HeroSection = ({ goTo }: IProps) => {
                         I'm <strong>Rakesh Choudhury</strong> — a Senior Software Engineer
                         focused on{" "}
                         <strong>
-                            React Native, React and mobile application development
+                            React Native, Android, and modern frontend development
                         </strong>
                         . I build reusable components, integrate complex capabilities, and
-                        turn requirements into reliable experiences.
+                        turn product requirements into reliable, production-ready experiences.
                     </p>
                     <div className="hero-actions">
                         <button className="primary" onClick={() => goTo("projects")}>Explore my work <ArrowUpRight size={17} /></button>
@@ -41,7 +41,7 @@ const HeroSection = ({ goTo }: IProps) => {
                         <a href={profile.github} target="_blank" rel="noreferrer"><Github size={18} /></a>
                     </div>
                     <p className="loc enter">
-                        <span /> Bangalore, India · open to interesting problems
+                        <span /> Bangalore, India · open to interesting opportunities
                     </p>
                 </motion.div>
 
