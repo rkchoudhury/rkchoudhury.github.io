@@ -94,10 +94,10 @@ export const Phone = () => {
                         </div>
                     </div>
                     <div className="plog">
-                        <div>› RN: reusable components</div>
-                        <div>› BLE: controller data</div>
-                        <div>› TS: 50+ files migrated</div>
-                        <div>› MFE: Re.Pack exposure</div>
+                        <div>{">"} BLE: <span>controller data</span></div>
+                        <div>{">"} TS: <span>50+ files migrated</span></div>
+                        <div>{">"} MFE: <span>Re.Pack exposure</span></div>
+                        <div>{">"} Android: <span>Kotlin + Jetpack Compose</span></div>
                     </div>
                     <div className="pnav">
                         <a href={`tel:${profile.phone}`} aria-label="Call Rakesh"><PhoneIcon size={12} /></a>
