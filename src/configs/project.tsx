@@ -38,7 +38,7 @@ const projects = [
 
 const personalProjects = [
     {
-        title: "DevTinder",
+        title: "Dev Tinder",
         icon: "🤝",
         type: "Web & Mobile • Full Stack",
         period: "May 2025 — Dec 2025",
@@ -58,7 +58,7 @@ const personalProjects = [
         github: profile.github + "/movie-hub",
     },
     {
-        title: "Netflix Clone",
+        title: "Netflix GPT",
         icon: "🎬",
         type: "Web Application",
         period: "Jan 2024 — Feb 2024",
