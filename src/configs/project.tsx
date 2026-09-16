@@ -25,7 +25,7 @@ const projects = [
     },
     {
         title: "Healthcare Apps",
-        icon: "💬",
+        icon: "💊",
         organisation: "Tech Mahindra",
         stack: ["React Native", "Jitsi", "Twilio", "Maps"],
         description:
@@ -42,10 +42,20 @@ const personalProjects = [
         icon: "🤝",
         type: "Web & Mobile • Full Stack",
         period: "May 2025 — Dec 2025",
-        stack: ["React", "Node.js", "MongoDB", "Socket.io"],
+        stack: ["React Native", "React", "Node.js", "MongoDB", "Socket.io"],
         description:
             "A full-stack platform that helps developers connect, interact and collaborate, with real-time chat and payment integration.",
         github: profile.github + "/devTinder",
+    },
+    {
+        title: "Moive Hub",
+        icon: "🎞️",
+        type: "Android Application",
+        period: "Feb 2025 — Apr 2025",
+        stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
+        description:
+            "An Android movie application with search, filtering, navigation and local persistence using Room Database.",
+        github: profile.github + "/movie-hub",
     },
     {
         title: "Netflix Clone",
@@ -55,18 +65,18 @@ const personalProjects = [
         stack: ["React", "Redux Toolkit", "Tailwind CSS"],
         description:
             "A Netflix-inspired React application featuring debounced search, caching, API polling chat and n-level nested comments.",
-        github: profile.github + "/devTinder",
+        github: profile.github + "/netflix-gpt",
     },
-    {
-        title: "Food Ordering App",
-        icon: "🍔",
-        type: "Android Application",
-        period: "Aug 2023 — Dec 2023",
-        stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
-        description:
-            "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
-        github: profile.github + "/devTinder",
-    },
+    // {
+    //     title: "Food Ordering App",
+    //     icon: "🍔",
+    //     type: "Android Application",
+    //     period: "Aug 2023 — Dec 2023",
+    //     stack: ["Kotlin", "Jetpack Compose", "Room DB", "Ktor"],
+    //     description:
+    //         "An Android food ordering application with search, filtering, navigation and local persistence using Room Database.",
+    //     github: profile.github + "/little-lemon-app",
+    // },
 ];
 
 export { projects, personalProjects };

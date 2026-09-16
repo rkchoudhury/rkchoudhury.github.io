@@ -10,7 +10,7 @@ const Footer = () => {
 
     const appVersion = useMemo(() => packageJson.version, []);
     const label = useMemo(() => {
-        return count > 5 ? `App: v${appVersion}, Visitors: ${visitorCount}` : `© ${new Date().getFullYear()} ${profile.name}`
+        return count > 5 ? `App: v${appVersion} | Visitors: ${visitorCount}` : `© ${new Date().getFullYear()} ${profile.name}`
     }, [count]);
 
     return (
