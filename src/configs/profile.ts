@@ -8,12 +8,15 @@ export const profile = {
   phone: "+91 9916321521",
   resume: "Rakesh_Choudhury_Mobile_Developer.pdf",
   url: "https://avatars.githubusercontent.com/u/39880621?v=4",
+  college: "Indira Gandhi Institute of Technology, Sarang, Odisha",
+  education: "B.Tech, Computer Science Engineering",
+  educationYear: "Aug 2013 - May 2017",
 };
 
 export const highlightedFacts = [
   {
     label: "Architecture",
-    text: "Reusable React Native components and modular integration",
+    text: "Reusable React Native components and modular application integration",
   },
   {
     label: "Reliability",
@@ -21,10 +24,14 @@ export const highlightedFacts = [
   },
   {
     label: "Mobile",
-    text: "React Native, Android, BLE, responsive UI and native integrations",
+    text: "React Native, Android, BLE and native integrations",
   },
   {
-    label: "Full stack",
-    text: "React frontend with Node.js, Express and MongoDB",
+    label: "Backend",
+    text: "Node.js, Express and MongoDB through full-stack projects",
   },
+  // {
+  //   label: "Android",
+  //   text: "Kotlin, Jetpack Compose and native Android development",
+  // },
 ];

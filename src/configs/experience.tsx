@@ -6,19 +6,27 @@ export const experience = [
     location: "Bangalore, India",
     points: [
       <>
-        Developed reusable <strong>React Native components</strong> for
-        scalability and maintainability.
+        Developed reusable <strong>React Native components</strong> to improve
+        scalability, consistency and maintainability across applications.
       </>,
       <>
-        Integrate and customize third-party libraries and plugins to improve application performance and user experience.
+        Integrated and customized third-party libraries and plugins to support
+        application features and user experience.
       </>,
       <>
-        Collaborate with cross-functional squads for seamless integration and delivery.
+        Collaborated with cross-functional engineering squads to support
+        seamless integration and delivery.
       </>,
       <>
-        Worked on <strong>Bangkok Bank Mobile Banking</strong> and gained practical exposure to micro-frontend architecture
-        with <strong>Re.Pack</strong>.
+        Worked on an <strong>enterprise mobile banking platform</strong> and gained
+        practical exposure to <strong>Re.Pack</strong> and micro-frontend
+        architecture.
       </>,
+      // <>
+      //   Worked on <strong>Bangkok Bank Mobile Banking</strong> and gained
+      //   practical exposure to <strong>Re.Pack</strong> and micro-frontend
+      //   architecture.
+      // </>,
     ],
   },
   {
@@ -32,10 +40,6 @@ export const experience = [
         <strong>HMI devices and controllers</strong>.
       </>,
       <>
-        Maintained clean, efficient, documented code and participated in code
-        reviews and Agile processes.
-      </>,
-      <>
         <strong>BMS Startup:</strong> Implemented BLE communication for
         real-time controller data and migrated{" "}
         <strong>50+ JavaScript files to TypeScript</strong>, reducing runtime
@@ -44,6 +48,10 @@ export const experience = [
       <>
         <strong>Flow Manager:</strong> Implemented live polling every 5 seconds
         and BLE-based IO configuration delivery.
+      </>,
+      <>
+        Maintained clean, efficient and well-documented code while participating
+        in code reviews and Agile development.
       </>,
     ],
   },
@@ -54,18 +62,20 @@ export const experience = [
     location: "Bangalore, India",
     points: [
       <>
-        Started my mobile career building healthcare applications with{" "}
-        <strong>React Native</strong>.
+        Started my mobile development career building healthcare applications
+        with <strong>React Native</strong>.
       </>,
-      <>Built responsive UI components across devices and screen sizes.</>,
+      <>
+        Built responsive UI components across devices and screen sizes.
+      </>,
       <>
         <strong>MyBSWHealth:</strong> Implemented map clustering for doctor
-        counts and integrated omnichannel chatbot/chat.
+        counts and integrated omnichannel chatbot functionality.
       </>,
       <>
-        <strong>BSW Virtual:</strong> contributed to Jitsi/Twilio video
-        consultation and UI redesign, boosting retention by <strong>35%</strong>
-        .
+        <strong>BSW Virtual:</strong> Contributed to Jitsi/Twilio video
+        consultation and UI redesign, contributing to a{" "}
+        <strong>35% increase in retention</strong>.
       </>,
     ],
   },

@@ -24,3 +24,13 @@
   color: var(--muted);
   font: 14px var(--mono);
 }
+.skills-note {
+  color: var(--muted);
+  margin: 24px auto 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.skills-note strong {
+  color: var(--text);
+  font-weight: 600;
+}
